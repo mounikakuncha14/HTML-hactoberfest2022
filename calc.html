@@ -141,3 +141,223 @@
 </body>
 
 </html>
+    <head>
+        <title>C CALCI</title>
+        <img src="https://cdn-icons-png.flaticon.com/512/75/75775.png" height=80,width=80>
+
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+        <style>
+            body{
+             background-color:lightskyblue;
+             background-image: url("https://png.pngtree.com/png-clipart/20210310/ourlarge/pngtree-math-clipart-cartoon-style-digital-calculator-abacus-png-image_2995966.jpg");
+              background-repeat: no-repeat;
+              background-position: center top;}
+              input[type=button] {
+             background-color: rgb(138, 192, 226);
+             border: none;
+            }
+       </style>
+        <style>
+           * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+    }
+    body{
+    font-family: sans-serif;
+    }
+    a{
+    text-decoration: none;
+    color: #fff;
+    }
+    body{
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/980/1017/160/pixel-art-pixelated-nature-landscape-pixels-hd-wallpaper-89d008cdf12a9d0b46a7380f101106bd.jpg");
+    background-size: 110% 110%;
+    }
+    .container{
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    }
+    .calculator{
+    position: relative;
+    height:fit-content;
+    width:max-content;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10 10 30px #000;
+    
+    }
+    .theme-toggler{
+     position: absolute;
+     top: 30px; 
+     right: 30px;
+      color: #fff;
+     cursor: pointer;
+     z-index: 1;
+    }
+     .theme-toggler.active{
+     color: #333;
+    }
+     .theme-toggler.active::before{
+      background-color: #fff;
+    }
+    .theme-toggler::before{
+     content: '';
+     height: 30px;
+     width: 30px;
+      position: absolute;
+     top: 50%;
+       transform: translate(-50%, -50%);
+     border-radius: 50%;
+     background-color: #333;
+     z-index: -1;
+    }
+    #display{
+     margin: 0px;
+     height: 60px;
+     width: auto;
+     max-width: 270px;
+     display: flex;
+     align-items: flex-end;
+     justify-content: flex-end;
+     font-size: 30px;
+     margin-bottom: 20px;
+     overflow-x: scroll;
+    }
+    #display::-webkit-scrollbar{
+     display: block;
+     height: 3px;
+    }
+    button{
+     height: 60px;
+     width: 60px;
+       border: 10px;
+     border-radius: 30px;
+     margin: 5px;
+     font-size: 20px;
+     cursor: pointer;
+     transition: all 200ms ease;
+    }
+    button:hover{
+    transform: scale(1.1);
+    }
+    button#equal{
+    height: 130px;
+    }
+    /* light theme */
+    .calculator{
+    background-color: #fff;
+    }
+    .calculator #display{
+    color: #0a1e23;
+    }
+    .calculator button#clear{
+    background-color: #ffd5d8;
+    color: #fc4552;
+    }
+    .calculator button.btn-number{
+    background-color: #c3eaff;
+    color: #000;
+    }
+    .calculator button.btn-operator{
+    background-color: #ffd0fd;
+    color: #f967f3;
+    }
+    .calculator button.btn-equal{
+    background-color: #adf9e7;
+    color: #000;
+    }
+    /* dark theme */
+    .calculator.dark{
+    background-color: #071115;
+    }
+    .calculator.dark #display{
+    color: #f8fafd;
+    }
+    .calculator.dark button#clear{
+    background-color: #2d191e;
+    color: #bd3740;
+    }
+    .calculator.dark button.btn-number{
+    background-color: #1b2f38;
+    color: #f8fafb;
+    }
+    .calculator.dark button.btn-operator{
+    background-color: #2e1f39;
+    color: #aa00a4;
+    }
+    .calculator.dark button.btn-equal{
+    background-color: #223323;
+    }
+        </style>
+    </head>
+    <body style="background-color:rgb(0, 0, 0)" align="center">
+        <div class="container"> 
+         
+        <div class="cal-box" >
+        <form name="calculator">
+        <input id="display" name="display" type="text" placeholder="0" readonly>
+        <br>
+        <input type="button" class="button" value="7" onclick="calculator.display.value +='7'">
+        <input type="button" class="button" value="8" onclick="calculator.display.value +='8'">
+        <input type="button" class="button" value="9" onclick="calculator.display.value +='9'">
+        <input type="button" class="button mathsbuttons" value="+" onclick="calculator.display.value +='+'">
+        <br>
+        <input type="button" class="button" value="4" onclick="calculator.display.value +='4'">
+        <input type="button" class="button" value="5" onclick="calculator.display.value +='5'">
+        <input type="button" class="button" value="6" onclick="calculator.display.value +='6'">
+        <input type="button" class="button mathsbuttons" value="-" onclick="calculator.display.value +='-'">
+
+        <br>
+        <input type="button" class="button" value="1" onclick="calculator.display.value +='1'">
+        <input type="button" class="button" value="2" onclick="calculator.display.value +='2'">
+        <input type="button" class="button" value="3" onclick="calculator.display.value +='3'">
+        <input type="button" class="button mathsbuttons" value="x" onclick="calculator.display.value +='*'">
+        <br>
+        <input type="button" class="button clearbutton" value="C" onclick="calculator.display.value =''">
+        <input type="button" class="button" value="0" onclick="calculator.display.value +='0'">
+        <input type="button" class="button mathsbuttons" value="=" onclick="calculator.display.value =eval(calculator.display.value)">
+        <input type="button" class="button mathsbuttons" value="/" onclick="calculator.display.value +='/'">
+        <br>
+        </form>
+    </div>
+</div>
+    </body> 
+    
+</html>
+<script>
+const display = document.querySelector('#display');
+const buttons = document.querySelectorAll('button');
+buttons.forEach((item) => {
+item.onclick = () => {
+if (item.id == 'clear') {
+display.innerText = '';
+} else if (item.id == 'backspace') {
+let string = display.innerText.toString();
+display.innerText = string.substr(0, string.length - 1);
+}else if (display.innerText != '' && item.id == 'equal') {
+display.innerText = eval(display.innerText);
+}else if (display.innerText == '' && item.id == 'equal') {
+display.innerText = 'Empty!';
+setTimeout(() => (display.innerText = ''), 2000);
+}else {
+display.innerText += item.id;
+}
+}
+})
+const themeToggleBtn = document.querySelector('.theme-toggler');
+const calculator = document.querySelector('.dark');
+const toggleIcon = document.querySelector('.toggler-icon');
+let isDark = true;
+themeToggleBtn.onclick = () => {
+calculator.classList.toggle('dark');
+themeToggleBtn.classList.toggle('active');
+isDark = !isDark;
+}
+</script>
+
