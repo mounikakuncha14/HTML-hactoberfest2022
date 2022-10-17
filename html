@@ -1,72 +1,71 @@
-<html>
-  <head>
-    <title>login diffently</title>
-    <style>
-      body{
-        background-image:linear-gradient(pink,violet,purple);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        text-align: center;
-        text-size-adjust: 50%;
-      }
-      p{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: medium;
-      }
-      span{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: medium;
-      }
-      h2{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: large;
-        text-align: center;
-      }
-    </style>
-  </head>
-<body><div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <h1>Login page with social media.</h1>
-      <div class="vl">
-        <span class="vl-innertext"><h2>Or Try With These.</h2></span><br><br><br>
-      </div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="veiwport" content="width=device-width,initial-scale=1.0" />
+        <title>submit button</title>
+        
+    </head>
+    <body>
+        <div class="section">
+            <div class="container">
+                <div class="row full-height justify-content-center">
+                    <div class="col-12 text-center align-self-center py-5">
+                        <div class="section pb-5 pt-5 pt-sm-2 text -center">
+                            <h6 class="mb-0 pb-3"><span>log In</span><span>Sign Up</span></h6>
+                            <input class="checkbox"type="checkbox"id="reg-log"name="reg-log" />
+                            <lable for="reg-log"></lable>
+                            <div class="card-3d-wrap mx-auto">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <h4 class="mb-4 pd-3">Log In</h4>
+                                            <div class="from group">
+                                                <input type="email"name="logemail"class="from -style"
+                                                placeholder="your email"id="logemail"autocomplete="off">
+                                                <i class="input-icon uil uil-at"></i>
+                                                </div>
+          <div class="form-group mt-2">
+            <input type="password"name="logpass"class="from-style"
+            place="your password"id="logpass"autocomplete="off">
+            <i class="input-icon uil uil-lock-alt"></i>
+            </div>
+            <a href="#"class="btn mt-4">Submit</a>
+            <p class="mb-0 mt-4 text-center"><a href="#0"class="link">Forgot your password?</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <h4 class="mb-4 pb-3">Sign Up</h4>
+                                            <div class="from-group">
 
-      <div class="col">
-        <a href="#" class="fb btn">
-          <i class="fa fa-facebook fa-fw"></i><b> Login with Facebook</b><br>
-        </a>
-        <a href="#" class="twitter btn">
-          <i class="fa fa-twitter fa-fw"></i><b> Login with Twitter</b><br>
-        </a>
-        <a href="#" class="google btn">
-          <i class="fa fa-google fa-fw"></i><b> Login with Google+</b><br>
-        </a>
-      </div>
+                                                <input type="text"name="lagname"class="from-style"
+                                                placeholder="your full name"id="logname"autocomplete="off">
+                                                <i class="input-icon uil uil-user"></i>
+                                                </div>
+                                                <div class="from-group mt-2">
 
-      <div class="col">
-        <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
+                                                    <input type="email"name="lagemail"class="from-style"
+                                                    placeholder="your Email"id="logemail"autocomplete="off">
+                                                    <i class="input-icon uil uil-at"></i>
+                                                    </div>
+                                                    <div class="from-group mt-2">
+                                                        <input type="password"name="logpass"class="from-style"
+                                                        placeholder="your password" id="logpass"autocomplete="off">
+                                                        <i class ="input-icon uil uil-lock-alt"></i>
+                                                    </div>
+                                                    <a href="#" class="btn mt-4">Submit</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        </body>
 
-        <input type="text" name="username" placeholder="Username" required><br><br>
-        <input type="password" name="password" placeholder="Password" required><br><br>
-        <input type="submit" value="Login">
-      </div>
-
-    </div>
-  </form>
-</div>
-
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#"  class="btn">Sign up</a>
-    </div>
-    <div class="col">
-      <a href="#" class="btn">Forgot password?</a>
-    </div>
-  </div>
-</div>
-</body>
-</html>
