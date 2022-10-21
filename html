@@ -1,71 +1,117 @@
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="veiwport" content="width=device-width,initial-scale=1.0" />
-        <title>submit button</title>
-        
-    </head>
-    <body>
-        <div class="section">
-            <div class="container">
-                <div class="row full-height justify-content-center">
-                    <div class="col-12 text-center align-self-center py-5">
-                        <div class="section pb-5 pt-5 pt-sm-2 text -center">
-                            <h6 class="mb-0 pb-3"><span>log In</span><span>Sign Up</span></h6>
-                            <input class="checkbox"type="checkbox"id="reg-log"name="reg-log" />
-                            <lable for="reg-log"></lable>
-                            <div class="card-3d-wrap mx-auto">
-                                <div class="card-front">
-                                    <div class="center-wrap">
-                                        <div class="section text-center">
-                                            <h4 class="mb-4 pd-3">Log In</h4>
-                                            <div class="from group">
-                                                <input type="email"name="logemail"class="from -style"
-                                                placeholder="your email"id="logemail"autocomplete="off">
-                                                <i class="input-icon uil uil-at"></i>
-                                                </div>
-          <div class="form-group mt-2">
-            <input type="password"name="logpass"class="from-style"
-            place="your password"id="logpass"autocomplete="off">
-            <i class="input-icon uil uil-lock-alt"></i>
-            </div>
-            <a href="#"class="btn mt-4">Submit</a>
-            <p class="mb-0 mt-4 text-center"><a href="#0"class="link">Forgot your password?</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-back">
-                                    <div class="center-wrap">
-                                        <div class="section text-center">
-                                            <h4 class="mb-4 pb-3">Sign Up</h4>
-                                            <div class="from-group">
+        <meta charset="UTF-8">
+        <meta https-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="veiwport"content="width=device-width,intial-scale=1.0">
+        <title>password GEN..</title>
+        <style>
+        *{
+    box-sizing:border-box;
+}
+body{
+    margin: 0;
+    font-family: "poppins",sans-serif;
+    background-color: rebeccapurple;
+    color: #eee;
+    display:flex;
+    align-items: center;
+    min-height: 100vh;
+}
+.pw-container{
+    width: 400px;
+    background-color: rgd(69,17,118);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+.pw-header{
+    padding: 1rem;
+}
+.pw{
+    width: 100%;
+    height: 70px;
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.pw button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0,50%);
+    transition: opacity 0.2s ease,transform 0.2s ease;
+    opacity: 0;
+    background-color: rgd(35,5,66);
+    padding: 0.25rem 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+}
+.pw:hover button{
+    opacity:1;
+    transform: translate(0,-80%);
 
-                                                <input type="text"name="lagname"class="from-style"
-                                                placeholder="your full name"id="logname"autocomplete="off">
-                                                <i class="input-icon uil uil-user"></i>
-                                                </div>
-                                                <div class="from-group mt-2">
+}
+.pw-body{
+    padding: 0 1rem 1rem;
+}
+.from-control{
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+.generate{
+    display: block;
+    background-color: #ecb602;
+    color: rebeccapurple;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+</style>
+        <body>
+            <div class="pw-container">
+                <div class="pw-header">
+                    <div class="pw">
+                        <span id="pw">password here</span>
+                        <button id="copy">copy</button>
 
-                                                    <input type="email"name="lagemail"class="from-style"
-                                                    placeholder="your Email"id="logemail"autocomplete="off">
-                                                    <i class="input-icon uil uil-at"></i>
-                                                    </div>
-                                                    <div class="from-group mt-2">
-                                                        <input type="password"name="logpass"class="from-style"
-                                                        placeholder="your password" id="logpass"autocomplete="off">
-                                                        <i class ="input-icon uil uil-lock-alt"></i>
-                                                    </div>
-                                                    <a href="#" class="btn mt-4">Submit</a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+                <div class="pw-body">
+                    <div class="from-control">
+                        <lable for="length">password length</lable>
+                        <input id="len"value="10"type="number"min="8"max="30">
+                    </div>
+                    <div class="form-control">
+                        <lable for="upper">contain upper case letters</lable>
+                        <input id="upper"type="checkbox">
+                    </div>
+                    <div class="form-control">
+                        <lable for="upper">contain lower case letters</lable>
+                        <input id="upper"type="checkbox">
+                     </div>
+                     <div class="form-control">
+                        <lable for="upper">contain numbers</lable>
+                        <input id="upper"type="checkbox">
+                </div>
+                <div class="form-control">
+                    <lable for="upper">contain symbols</lable>
+                    <input id="upper"type="checkbox">
             </div>
-        </div>
+            <button class="generate" id="generate">Generate password</button>
+                </div>
+            </div>
+            
         </body>
+    </head>
+</html>
+
 
